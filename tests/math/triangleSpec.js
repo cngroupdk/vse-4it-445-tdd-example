@@ -29,4 +29,15 @@ describe('triangle', () => {
 
   })
 
+
+  describe('throws Error', () => {
+  
+    it('for missing input parameter', () => {
+      expect(() => {
+        triangle.area(3, 8)
+      }).to.throw('Missing input')
+    })
+
+  })
+
 })
