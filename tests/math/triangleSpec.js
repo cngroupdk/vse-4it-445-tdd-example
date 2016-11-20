@@ -14,4 +14,15 @@ describe('triangle', () => {
     expect(triangleModule).to.exist
   })
 
+  const triangle = triangleModule()
+
+
+  describe('computes correctly', () => {
+
+    it('3 + 4 + 5', () => {
+      expect(triangle.area(3, 4, 5)).to.be.equal(6)
+    })
+
+  })
+
 })
