@@ -23,6 +23,10 @@ describe('triangle', () => {
       expect(triangle.area(3, 4, 5)).to.be.equal(6)
     })
 
+    it('5 + 12 + 13', () => {
+      expect(triangle.area(5, 12, 13)).to.be.equal(30)
+    })
+
   })
 
 })
