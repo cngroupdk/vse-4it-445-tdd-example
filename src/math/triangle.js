@@ -3,7 +3,11 @@
 function triangle() {
 
   function area(a, b, c) {
-    return 6
+    // Herons formula
+    const s = (a + b + c) / 2
+    const t = s * (s - a) * (s - b) * (s - c)
+    const triangleArea = Math.sqrt(t)
+    return triangleArea
   }
 
   const api = {
