@@ -7,6 +7,10 @@ function triangle() {
       throw(new Error('Missing input'))
     }
 
+    if (a <= 0 || b <= 0 || c <= 0) {
+      throw(new Error('Invalid input'))
+    }
+
     // Herons formula
     const s = (a + b + c) / 2
     const t = s * (s - a) * (s - b) * (s - c)
