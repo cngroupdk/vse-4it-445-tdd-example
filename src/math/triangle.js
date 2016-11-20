@@ -3,9 +3,7 @@
 function triangle() {
 
   function area(a, b, c) {
-    if (a === undefined || b === undefined || c === undefined) {
-      throw(new Error('Missing input'))
-    }
+    _checkMandatoryAreaParameters(a, b, c)
 
     if (a <= 0 || b <= 0 || c <= 0) {
       throw(new Error('Invalid input'))
@@ -23,6 +21,14 @@ function triangle() {
     const triangleArea = Math.sqrt(t)
     return triangleArea
   }
+
+
+  function _checkMandatoryAreaParameters(a, b, c) {
+    if (a === undefined || b === undefined || c === undefined) {
+      throw(new Error('Missing input'))
+    }
+  }
+
 
   const api = {
     area: area
