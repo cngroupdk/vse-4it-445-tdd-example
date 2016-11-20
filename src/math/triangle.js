@@ -13,13 +13,13 @@ function triangle() {
 
   function _checkMandatoryAreaParameters(a, b, c) {
     if (a === undefined || b === undefined || c === undefined) {
-      throw(new Error('Missing input'))
+      throw (new Error('Missing input'))
     }
   }
 
   function _validateAreaParameters(a, b, c) {
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw(new Error('Invalid input'))
+      throw (new Error('Invalid input'))
     }
   }
 
@@ -27,7 +27,7 @@ function triangle() {
     if ((a + b) < c ||
         (b + c) < a ||
         (c + a) < b) {
-      throw(new Error('Unconstructible triangle'))
+      throw (new Error('Unconstructible triangle'))
     }
   }
 
