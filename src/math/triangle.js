@@ -5,12 +5,7 @@ function triangle() {
   function area(a, b, c) {
     _checkMandatoryAreaParameters(a, b, c)
     _validateAreaParameters(a, b, c)
-
-    if ((a + b) < c ||
-        (b + c) < a ||
-        (c + a) < b) {
-      throw(new Error('Unconstructible triangle'))
-    }
+    _checkTriangleConstructibility(a, b, c)
 
     // Herons formula
     const s = (a + b + c) / 2
@@ -29,6 +24,14 @@ function triangle() {
   function _validateAreaParameters(a, b, c) {
     if (a <= 0 || b <= 0 || c <= 0) {
       throw(new Error('Invalid input'))
+    }
+  }
+
+  function _checkTriangleConstructibility(a, b, c) {
+    if ((a + b) < c ||
+        (b + c) < a ||
+        (c + a) < b) {
+      throw(new Error('Unconstructible triangle'))
     }
   }
 
