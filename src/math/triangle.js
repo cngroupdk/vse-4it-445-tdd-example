@@ -4,10 +4,7 @@ function triangle() {
 
   function area(a, b, c) {
     _checkMandatoryAreaParameters(a, b, c)
-
-    if (a <= 0 || b <= 0 || c <= 0) {
-      throw(new Error('Invalid input'))
-    }
+    _validateAreaParameters(a, b, c)
 
     if ((a + b) < c ||
         (b + c) < a ||
@@ -26,6 +23,12 @@ function triangle() {
   function _checkMandatoryAreaParameters(a, b, c) {
     if (a === undefined || b === undefined || c === undefined) {
       throw(new Error('Missing input'))
+    }
+  }
+
+  function _validateAreaParameters(a, b, c) {
+    if (a <= 0 || b <= 0 || c <= 0) {
+      throw(new Error('Invalid input'))
     }
   }
 
