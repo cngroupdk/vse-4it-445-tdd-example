@@ -44,6 +44,12 @@ describe('triangle', () => {
       }).to.throw('Invalid input')
     })
 
+    it('for unconstructible triangle', () => {
+      expect(() => {
+        triangle.area(1, 1, 10)
+      }).to.throw('Unconstructible triangle')
+    })
+
   })
 
 })
