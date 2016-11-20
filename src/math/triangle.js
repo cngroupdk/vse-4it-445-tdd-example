@@ -3,6 +3,10 @@
 function triangle() {
 
   function area(a, b, c) {
+    if (a === undefined || b === undefined || c === undefined) {
+      throw(new Error('Missing input'))
+    }
+
     // Herons formula
     const s = (a + b + c) / 2
     const t = s * (s - a) * (s - b) * (s - c)
