@@ -38,6 +38,12 @@ describe('triangle', () => {
       }).to.throw('Missing input')
     })
 
+    it('for non-sense input parameter', () => {
+      expect(() => {
+        triangle.area(3, 4, -5)
+      }).to.throw('Invalid input')
+    })
+
   })
 
 })
