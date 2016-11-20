@@ -7,11 +7,7 @@ function triangle() {
     _validateAreaParameters(a, b, c)
     _checkTriangleConstructibility(a, b, c)
 
-    // Herons formula
-    const s = (a + b + c) / 2
-    const t = s * (s - a) * (s - b) * (s - c)
-    const triangleArea = Math.sqrt(t)
-    return triangleArea
+    return _computeHeronsFormula(a, b, c)
   }
 
 
@@ -33,6 +29,13 @@ function triangle() {
         (c + a) < b) {
       throw(new Error('Unconstructible triangle'))
     }
+  }
+
+  function _computeHeronsFormula(a, b, c) {
+    const s = (a + b + c) / 2
+    const t = s * (s - a) * (s - b) * (s - c)
+    const triangleArea = Math.sqrt(t)
+    return triangleArea
   }
 
 
