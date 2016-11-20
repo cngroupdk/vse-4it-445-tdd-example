@@ -11,6 +11,12 @@ function triangle() {
       throw(new Error('Invalid input'))
     }
 
+    if ((a + b) < c ||
+        (b + c) < a ||
+        (c + a) < b) {
+      throw(new Error('Unconstructible triangle'))
+    }
+
     // Herons formula
     const s = (a + b + c) / 2
     const t = s * (s - a) * (s - b) * (s - c)
